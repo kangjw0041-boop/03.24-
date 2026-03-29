@@ -1,0 +1,22 @@
+s=input()
+tota=0
+
+for ch in s:
+    if ch >= 'a' and ch <= 'z':
+        total += ord(ch) - 96
+    else:
+        total += ord(ch) - 38
+
+if total == 1:
+    print("It is a prime word.")
+else:
+    is_prime = True
+    for i in range(2, total):
+        if total % i == 0:
+            is_prime = False
+            break
+
+    if is_prime:
+        print("It is a prime word.")
+    else:
+        print("It is not a prime word.")
