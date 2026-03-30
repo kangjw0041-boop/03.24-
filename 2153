@@ -1,22 +1,21 @@
-s=input()
-total=0
+word = input()
+sum = 0
 
-for ch in s:
-    if ch >= 'a' and ch <= 'z':
-        total += ord(ch) - 96
+for i in word:
+    if 'a' <= i <= 'z':
+        sum = sum + (ord(i) - ord('a') + 1)
     else:
-        total += ord(ch) - 38
+        sum = sum + (ord(i) - ord('A') + 27)
 
-if total == 1:
+if sum == 1:
     print("It is a prime word.")
 else:
-    is_prime = True
-    for i in range(2, total):
-        if total % i == 0:
-            is_prime = False
-            break
+    prime = True
+    for i in range(2, sum):
+        if sum % i == 0:
+            prime = False
 
-    if is_prime:
+    if prime == True:
         print("It is a prime word.")
     else:
         print("It is not a prime word.")
