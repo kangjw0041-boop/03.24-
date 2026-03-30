@@ -1,5 +1,5 @@
 s=input()
-tota=0
+total=0
 
 for ch in s:
     if ch >= 'a' and ch <= 'z':
