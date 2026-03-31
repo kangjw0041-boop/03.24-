@@ -15,7 +15,7 @@ if total > 1:
             prime = False
             break   # 약수 찾으면 바로 종료
 
-if prime:
+if prime==True:
     print("It is a prime word.")
 else:
     print("It is not a prime word.")
