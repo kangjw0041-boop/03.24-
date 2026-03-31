@@ -1,21 +1,21 @@
 word = input()
-sum = 0
+total = 0
 
 for i in word:
     if 'a' <= i <= 'z':
-        sum = sum + (ord(i) - ord('a') + 1)
+        total += ord(i) - ord('a') + 1
     else:
-        sum = sum + (ord(i) - ord('A') + 27)
+        total += ord(i) - ord('A') + 27
 
-if sum == 1:
+prime = True
+
+if total > 1:
+    for i in range(2, total):
+        if total % i == 0:
+            prime = False
+            break   # 약수 찾으면 바로 종료
+
+if prime:
     print("It is a prime word.")
 else:
-    prime = True
-    for i in range(2, sum):
-        if sum % i == 0:
-            prime = False
-
-    if prime == True:
-        print("It is a prime word.")
-    else:
-        print("It is not a prime word.")
+    print("It is not a prime word.")
